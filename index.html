@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/fonts.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- styles -->
+    <!-- External scripts -->
+
+    <!-- External scripts -->
+    <title>Green Chart</title>
+  </head>
+  <body style="background-image: url('./assets/img/bg_grid.png')">
+    <!-- HEADER MAIN -->
+    <header class="header-main">
+      <div class="container">
+        <nav class="header_menu" data-menu="menu">
+          <a class="Logo" href="/"
+            ><svg
+              width="40"
+              height="29"
+              viewBox="0 0 40 29"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.7943 10.6048L11.2695 13.1053C10.7876 13.5826 10.7876 14.3564 11.2695 14.8337L14.0506 17.588C14.5686 18.1009 15.8784 17.6152 16.3963 17.1023L18.5436 14.9757C18.7751 14.7465 18.9051 14.4356 18.9051 14.1115L18.9051 12.7748C18.9051 10.7498 20.5627 9.10824 22.6074 9.10824H26.2199C28.2646 9.10824 29.9222 10.7498 29.9222 12.7748L29.9222 16.3525C29.9222 18.3775 28.2646 20.0191 26.2199 20.0191H24.8704C24.5431 20.0191 24.2292 20.1478 23.9977 20.377L21.8503 22.5037C21.3324 23.0166 20.842 24.3138 21.3599 24.8267L24.141 27.581C24.623 28.0583 25.4044 28.0583 25.8863 27.581L28.5698 24.9234C28.888 24.6083 28.9929 24.1477 28.9446 23.7047C28.8142 22.5062 29.2128 21.2619 30.1404 20.3431C31.0681 19.4244 32.3245 19.0297 33.5347 19.1589C33.9821 19.2067 34.4472 19.1028 34.7653 18.7877L38.7578 14.8337C39.2398 14.3564 39.2398 13.5826 38.7578 13.1053L35.2063 9.58805C34.8734 9.2584 34.3816 9.16202 33.9148 9.22236C32.768 9.3706 31.5668 9.00847 30.6858 8.13599C29.8049 7.2635 29.4392 6.07392 29.5889 4.93821C29.6498 4.47593 29.5525 3.98879 29.2196 3.65914L25.8863 0.357973C25.4044 -0.119325 24.623 -0.119324 24.141 0.357973L20.3072 4.15477C19.9629 4.49573 19.8699 5.00334 19.9536 5.47833C20.1791 6.75699 19.7932 8.12069 18.7961 9.10824C17.7989 10.0958 16.4219 10.4779 15.1308 10.2546C14.6512 10.1717 14.1386 10.2639 13.7943 10.6048Z"
+                fill="currentColor"
+              />
+              <path
+                d="M10.7081 3.50661L13.233 1.00614C13.7149 0.528843 14.4963 0.528843 14.9783 1.00614L17.7594 3.76043C18.2773 4.27336 17.7869 5.57053 17.2689 6.08345L15.1216 8.21007C14.8902 8.43928 14.5763 8.56804 14.249 8.56804H12.8993C10.8546 8.56804 9.19699 10.2096 9.19699 12.2346L9.19698 15.8123C9.19698 17.8373 10.8546 19.4789 12.8993 19.4789L16.5118 19.4789C18.5565 19.4789 20.2141 17.8373 20.2141 15.8123V14.4757C20.2141 14.1516 20.3441 13.8407 20.5756 13.6115L22.723 11.4849C23.2409 10.9719 24.5507 10.4862 25.0686 10.9991L27.8498 13.7534C28.3317 14.2307 28.3317 15.0046 27.8498 15.4819L25.1662 18.1395C24.8481 18.4546 24.383 18.5585 23.9356 18.5107C22.7255 18.3815 21.469 18.7762 20.5414 19.695C19.6137 20.6137 19.2151 21.858 19.3456 23.0565C19.3938 23.4995 19.2889 23.9601 18.9707 24.2752L14.9782 28.2292C14.4963 28.7065 13.7149 28.7065 13.233 28.2292L9.68147 24.712C9.3486 24.3823 9.25129 23.8952 9.31222 23.4329C9.4619 22.2972 9.09624 21.1076 8.21526 20.2351C7.33427 19.3626 6.1331 19.0005 4.98632 19.1487C4.51954 19.2091 4.02766 19.1127 3.69479 18.7831L0.361461 15.4819C-0.120487 15.0046 -0.120487 14.2307 0.361461 13.7534L4.19526 9.95664C4.53953 9.61568 5.05209 9.52352 5.53171 9.60647C6.82282 9.82975 8.19981 9.44762 9.19698 8.46007C10.1942 7.47252 10.58 6.10882 10.3546 4.83016C10.2708 4.35517 10.3639 3.84756 10.7081 3.50661Z"
+                fill="currentColor"
+              />
+            </svg>
+
+            <p class="logo-brand">GREEN CHART</p></a
+          >
+          <div class="menu-desk-wrapper">
+            <ul class="nav_links header_links">
+              <li class="link">
+                <a title="Scroll to leaders section" href="#leaders">Leaders</a>
+              </li>
+              <li class="link">
+                <a title="Scroll to trades section" href="#trades">Trades</a>
+              </li>
+              <li class="link">
+                <a title="Scroll to advantages section" href="#advantages"
+                  >Advantages</a
+                >
+              </li>
+              <li class="link">
+                <a title="Scroll to stats section" href="#stats">Stats</a>
+              </li>
+            </ul>
+            <button
+              class="btn-primary"
+              type="button"
+              data-modal="form"
+              aria-haspopup="dialog"
+              aria-expanded="false"
+              aria-controls="modal-form"
+              title="Open modal form to register"
+            >
+              Register Now
+            </button>
+          </div>
+          <nav class="menu-mob">
+            <div>
+              <ul class="nav_links header_links">
+                <li class="link">
+                  <a title="Scroll to leaders section" href="#leaders"
+                    >Leaders</a
+                  >
+                </li>
+                <li class="link">
+                  <a title="Scroll to trades section" href="#trades">Trades</a>
+                </li>
+                <li class="link">
+                  <a title="Scroll to advantages section" href="#advantages"
+                    >Advantages</a
+                  >
+                </li>
+                <li class="link">
+                  <a title="Scroll to stats section" href="#stats">Stats</a>
+                </li>
+              </ul>
+              <button
+                class="btn-primary"
+                type="button"
+                data-modal="form"
+                aria-haspopup="dialog"
+                aria-expanded="false"
+                aria-controls="modal-form"
+                title="Open modal form to register"
+              >
+                Register Now
+              </button>
+              <div class="docs">
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  >Privacy policy</a
+                ><a href="" target="_blank" rel="noopener noreferrer">Terms</a>
+              </div>
+              <p class="copyright">GreenChart, All Rights Reserved. 2025</p>
+            </div>
+          </nav>
+          <button
+            id="btn-menu"
+            class="menu-mob-btn"
+            data-menu="btn"
+            type="menu"
+            aria-expanded="false"
+            aria-haspopup="menu"
+          >
+            <svg
+              class="icon-menu"
+              width="16"
+              height="12"
+              viewBox="0 0 16 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 -0.000976562H16V1.99902H0V-0.000976562Z"
+                fill="#E3FF34"
+              />
+              <path d="M0 4.99902H16V6.99902H0V4.99902Z" fill="#E3FF34" />
+              <path d="M0 9.99902H16V11.999H0V9.99902Z" fill="#E3FF34" />
+            </svg>
+
+            <svg
+              class="icon-close"
+              width="13"
+              height="13"
+              viewBox="0 0 13 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.3137 -0.000964165L12.7279 1.41325L7.77823 6.36294L12.728 11.3127L11.3138 12.7269L6.36401 7.77716L1.41421 12.727L0 11.3127L4.9498 6.36294L9.31025e-05 1.41324L1.41431 -0.000976562L6.36401 4.94873L11.3137 -0.000964165Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <!-- HEADER MAIN end -->
+    <main>
+      <section
+        id="hero"
+        data-section="hero"
+        style="background-image: url('./assets/img/bg_hero.png')"
+      >
+        <div class="container">
+          <div class="hero_content">
+            <div class="hero_text">
+              <h1 class="hero-title">
+                Earn from <span class="highligthed">£780</span> to
+                <span class="highligthed">£1,800</span> per day by using an
+                investment platform
+              </h1>
+              <div class="hero__registration-info">
+                <span class="flag-icon">
+                  <img src="./assets/img/flag_1.png" alt="UK Flag" />
+                </span>
+                <p class="hero__registration-text">
+                  UK registration is now <span class="highligthed">open</span>
+                </p>
+              </div>
+            </div>
+            <div class="form_wrapper">
+              <form class="form">
+                <div class="form_fields">
+                  <div class="form-field">
+                    <label for="first-name" class="field-label"
+                      >First name</label
+                    >
+                    <div class="form-input_wrapper">
+                      <input
+                        type="text"
+                        id="first-name"
+                        class="form-input"
+                        name="name"
+                        placeholder="Enter first name"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-field">
+                    <label for="last-name" class="field-label">Last name</label>
+                    <div class="form-input_wrapper">
+                      <input
+                        type="text"
+                        id="last-name"
+                        name="lastname"
+                        class="form-input"
+                        placeholder="Enter last name"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-field">
+                    <label for="email" class="field-label">Email</label>
+                    <div class="form-input_wrapper">
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-input"
+                        placeholder="Enter email"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-field phone-field">
+                    <label for="phone" class="field-label">Phone</label>
+                    <div>
+                      <div class="form-input_wrapper">
+                        <button type="button" class="current-flag">🇬🇧</button>
+                        <input
+                          type="text"
+                          id="phone"
+                          name="phone"
+                          class="form-input"
+                          placeholder="+44"
+                        />
+                      </div>
+                      <div class="countries_wrapper">
+                        <ul class="countries">
+                          <li>
+                            <button type="button" class="country">
+                              <span class="country-flag">🇬🇧</span>
+                              <p class="country-name">Great Britain</p>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn-primary">Register Now</button>
+              </form>
+            </div>
+          </div>
+          <img
+            aria-hidden="true"
+            class="bg-img hero-bg-img"
+            src="./assets/img/bitcoin.png"
+            alt=""
+          />
+          <img
+            aria-hidden="true"
+            class="bg-img hero-bg-img"
+            src="./assets/img/bitcoin.png"
+            alt=""
+          />
+          <img
+            aria-hidden="true"
+            class="bg-img hero-bg-img"
+            src="./assets/img/bitcoin.png"
+            alt=""
+          />
+        </div>
+      </section>
+      <section id="leaders" data-section="leaders">
+        <div class="container">
+          <div class="section">
+            <div class="section_title-wrapper">
+              <span class="section-label">Leaders</span>
+              <h2 class="section-title">Leaders who support us</h2>
+            </div>
+            <div class="swiper section_content leaders_swiper">
+              <div class="swiper-wrapper">
+                <!-- Swiper slides -->
+                <figure class="swiper-slide leaders_swiper_slide">
+                  <div class="slide_text">
+                    <blockquote class="leader-quote">
+                      <p>
+                        I have been using this platform for several years now
+                        and I can say that investing is the best way to earn
+                        passive income. Even as a side job. I encourage everyone
+                        to register today to avoid being too late tomorrow.
+                        Everyone in the UK will benefit from it!
+                      </p>
+                    </blockquote>
+                    <figcaption class="leader_name">
+                      <h3>Martin Lewis</h3>
+                      <p>Journalist, broadcaster</p>
+                    </figcaption>
+                  </div>
+                  <div class="leader_img">
+                    <img
+                      src="./assets/img/leader1.png"
+                      alt="Martin Lewis photo"
+                    />
+                  </div>
+                </figure>
+                <figure class="swiper-slide leaders_swiper_slide">
+                  <div class="slide_text">
+                    <blockquote class="leader-quote">
+                      <p>
+                        I consider this to be one of the most honest and
+                        progressive investment projects. My surprise was sparked
+                        after studying and testing the technology of the
+                        platform. Three weeks after discovering this system, I
+                        have invested 2 million in it. My growth today is 78.4%.
+                        The numbers speak louder than words.
+                      </p>
+                    </blockquote>
+                    <figcaption class="leader_name">
+                      <h3>Michael Platt</h3>
+                      <p>Billionaire, founder of BlueCrest Capital</p>
+                    </figcaption>
+                  </div>
+                  <div class="leader_img">
+                    <img
+                      src="./assets/img/leader2.png"
+                      alt="Michael Platt photo"
+                    />
+                  </div>
+                </figure>
+              </div>
+              <!-- Swiper pagination -->
+              <nav class="swiper-pagination"></nav>
+              <!-- Swiper navigation -->
+              <nav class="swiper-navigation leaders_swiper_navigation">
+                <button
+                  type="button"
+                  class="swiper-button-prev swiper-nav-button"
+                >
+                  <svg
+                    width="15"
+                    height="14"
+                    viewBox="0 0 15 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.5089 6.19825L14.2589 6.19825L14.2589 7.69825L13.5089 7.69825L2.81961 7.69825L6.78924 11.6679L7.31957 12.1983L6.25891 13.2589L5.72858 12.7286L0.655311 7.65536C0.264811 7.26483 0.264811 6.63167 0.655311 6.24114L5.72858 1.16794L6.25891 0.637541L7.31957 1.69824L6.78924 2.22854L2.81961 6.19825L13.5089 6.19825Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="swiper-button-next swiper-nav-button"
+                >
+                  <svg
+                    width="15"
+                    height="14"
+                    viewBox="0 0 15 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.11243 6.19825L0.362427 6.19825L0.362427 7.69825L1.11243 7.69825L11.8017 7.69825L7.8321 11.6679L7.30177 12.1983L8.36243 13.2589L8.89276 12.7286L13.966 7.65536C14.3565 7.26483 14.3565 6.63167 13.966 6.24114L8.89276 1.16794L8.36243 0.637541L7.30177 1.69824L7.8321 2.22854L11.8017 6.19825L1.11243 6.19825Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+              </nav>
+            </div>
+          </div>
+          <img
+            src="./assets/img/coin3.png"
+            alt=""
+            data-animate
+            aria-hidden="true"
+            class="bg-img leader-bg-img"
+          />
+          <img
+            src="./assets/img/coin1.png"
+            alt=""
+            data-animate
+            aria-hidden="true"
+            class="bg-img leader-bg-img"
+          />
+          <img
+            src="./assets/img/coin4.png"
+            alt=""
+            data-animate
+            aria-hidden="true"
+            class="bg-img leader-bg-img"
+          />
+        </div>
+      </section>
+      <section id="trades" data-section="trades">
+        <div class="container">
+          <div class="section">
+            <div class="section_title-wrapper">
+              <span class="section-label">Trades</span>
+              <h2 class="section-title">
+                GreenChart uses Artificial Intelligence and State-of-the art
+                algorithms to identify only profitable trades
+              </h2>
+            </div>
+            <div class="section_content trades_table_wrapper">
+              <table id="trades_table">
+                <thead>
+                  <tr>
+                    <th>Usuario</th>
+                    <th>Operacion</th>
+                    <th>Resultado</th>
+                    <th>Fecha</th>
+                    <th>Confirmacion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="positive">
+                    <td>Michael C.</td>
+                    <td>Sale</td>
+                    <td class="trade-result">+172,50</td>
+                    <td>08.04.25</td>
+                    <td>
+                      <span class="trade-confirm-icon"></span>
+                    </td>
+                  </tr>
+                  <tr class="positive">
+                    <td>James J.</td>
+                    <td>Sale</td>
+                    <td class="trade-result">+218,60</td>
+                    <td>08.04.25</td>
+                    <td>
+                      <span class="trade-confirm-icon"></span>
+                    </td>
+                  </tr>
+                  <tr class="positive">
+                    <td>Janet V.</td>
+                    <td>Sale</td>
+                    <td class="trade-result">+236,47</td>
+                    <td>08.04.25</td>
+                    <td>
+                      <span class="trade-confirm-icon"></span>
+                    </td>
+                  </tr>
+                  <tr class="positive">
+                    <td>Anne H.</td>
+                    <td>Sale</td>
+                    <td class="trade-result">+185,00</td>
+                    <td>08.04.25</td>
+                    <td>
+                      <span class="trade-confirm-icon"></span>
+                    </td>
+                  </tr>
+                  <tr class="positive">
+                    <td>Mark C.</td>
+                    <td>Sale</td>
+                    <td class="trade-result">+94,00</td>
+                    <td>08.04.25</td>
+                    <td>
+                      <span class="trade-confirm-icon"></span>
+                    </td>
+                  </tr>
+                  <tr class="positive">
+                    <td>Emily T.</td>
+                    <td>Sale</td>
+                    <td class="trade-result">+262,53</td>
+                    <td>08.04.25</td>
+                    <td>
+                      <span class="trade-confirm-icon"></span>
+                    </td>
+                  </tr>
+                  <tr class="negative">
+                    <td>Nick R.</td>
+                    <td>Sale</td>
+                    <td class="trade-result">-46,50</td>
+                    <td>08.04.25</td>
+                    <td>
+                      <span class="trade-confirm-icon"></span>
+                    </td>
+                  </tr>
+                  <tr class="positive">
+                    <td>Angela S.</td>
+                    <td>Sale</td>
+                    <td class="trade-result">+215,30</td>
+                    <td>08.04.25</td>
+                    <td>
+                      <span class="trade-confirm-icon"></span>
+                    </td>
+                  </tr>
+                  <tr class="positive">
+                    <td>Sam M.</td>
+                    <td>Sale</td>
+                    <td class="trade-result">+330,78</td>
+                    <td>08.04.25</td>
+                    <td>
+                      <span class="trade-confirm-icon"></span>
+                    </td>
+                  </tr>
+                  <tr class="negative">
+                    <td>Mario G.</td>
+                    <td>Sale</td>
+                    <td class="trade-result">-68,20</td>
+                    <td>08.04.25</td>
+                    <td>
+                      <span class="trade-confirm-icon"></span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <img
+                src="./assets/img/coin3.png"
+                alt=""
+                aria-hidden="true"
+                data-animate
+                class="bg-img trades-bg-img"
+              />
+              <img
+                src="./assets/img/coin1.png"
+                alt=""
+                aria-hidden="true"
+                data-animate
+                class="bg-img trades-bg-img"
+              />
+              <img
+                src="./assets/img/coin4.png"
+                alt=""
+                aria-hidden="true"
+                data-animate
+                class="bg-img trades-bg-img"
+              />
+              <img
+                src="./assets/img/coin5.png"
+                alt=""
+                aria-hidden="true"
+                data-animate
+                class="bg-img trades-bg-img"
+              />
+              <img
+                src="./assets/img/coin2.png"
+                alt=""
+                aria-hidden="true"
+                data-animate
+                class="bg-img trades-bg-img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="advantages" data-section="advantages">
+        <div class="container">
+          <div class="section">
+            <div class="section_title-wrapper">
+              <span class="section-label">Advantages</span>
+              <h2 class="section-title">
+                Register today to gain immediate access to this revolutionary
+                trading system!
+              </h2>
+            </div>
+            <div class="swiper section_content advantages_swiper">
+              <div class="swiper-wrapper">
+                <figure class="swiper-slide advantages_swiper_slide">
+                  <figcaption class="advantage_text">
+                    <span class="section-label">Advantages</span>
+                    <h3 class="advantage-title">Easy to use</h3>
+                    <p class="advantage-text">
+                      GreenChart installs in seconds on any mobile device or
+                      computer
+                    </p>
+                  </figcaption>
+                  <div
+                    class="advantage_img"
+                    style="
+                      background-image: url('./assets/img/advantages_section/1.png');
+                    "
+                    aria-hidden="true"
+                  >
+                    <span
+                      class="advantage_img-icon"
+                      style="
+                        background-image: url('./assets/img/advantages_section/icon-1.png');
+                      "
+                    ></span>
+                  </div>
+                </figure>
+                <figure class="swiper-slide advantages_swiper_slide">
+                  <figcaption class="advantage_text">
+                    <span class="section-label">Advantages</span>
+                    <h3 class="advantage-title">Trusted Performance</h3>
+                    <p class="advantage-text">
+                      Fully automated performance instantly scans all the major
+                      exchanges and brings in maximum profit
+                    </p>
+                  </figcaption>
+                  <div
+                    class="advantage_img"
+                    style="
+                      background-image: url('./assets/img/advantages_section/2.png');
+                    "
+                    aria-hidden="true"
+                  >
+                    <span
+                      class="advantage_img-icon"
+                      style="
+                        background-image: url('./assets/img/advantages_section/icon-2.png');
+                      "
+                    ></span>
+                  </div>
+                </figure>
+                <figure class="swiper-slide advantages_swiper_slide">
+                  <figcaption class="advantage_text">
+                    <span class="section-label">Advantages</span>
+                    <h3 class="advantage-title">Secure & Private</h3>
+                    <p class="advantage-text">
+                      Blockchain technology delivers a 96.9% success rate to all
+                      members
+                    </p>
+                  </figcaption>
+                  <div
+                    class="advantage_img"
+                    style="
+                      background-image: url('./assets/img/advantages_section/3.png');
+                    "
+                    aria-hidden="true"
+                  >
+                    <span
+                      class="advantage_img-icon"
+                      style="
+                        background-image: url('./assets/img/advantages_section/icon-3.png');
+                      "
+                    ></span>
+                  </div>
+                </figure>
+              </div>
+              <nav class="swiper-pagination"></nav>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="stats" data-section="stats">
+        <div class="container">
+          <div class="section">
+            <div class="section_title-wrapper">
+              <span class="section-label">Statistics</span>
+              <h2 class="section-title">Numbers speak for themselves</h2>
+              <p class="section-subtitle">
+                Transparency is our core principle. The platform's daily
+                turnover and growing investment figures demonstrate the
+                stability and reliability of our project in the energy sector.
+                <br />
+                The secret stock trading strategy is built on our collected
+                portfolio which is based on the analysis of thousands of large
+                companies.
+              </p>
+            </div>
+            <ul class="section_content stats_content">
+              <li class="stat_item">
+                <figure class="stat_metric">
+                  <figure class="metric_wrapper">
+                    <p class="metric-value" aria-live="polite">
+                      <span class="metric-currency">£</span
+                      ><span class="metric-number" data-animate data-target="87"
+                        >0</span
+                      >
+                    </p>
+                    <figcaption class="metric-label">million</figcaption>
+                  </figure>
+                  <figcaption class="stat-label">
+                    Current Investments
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="stat_item">
+                <figure class="stat_metric">
+                  <figure class="metric_wrapper">
+                    <p class="metric-value" aria-live="polite">
+                      <span class="metric-currency">£</span
+                      ><span
+                        class="metric-number"
+                        data-animate
+                        data-target="298"
+                        >0</span
+                      >
+                    </p>
+                    <figcaption class="metric-label">million</figcaption>
+                  </figure>
+                  <figcaption class="stat-label">Total Earnings</figcaption>
+                </figure>
+              </li>
+              <li class="stat_item">
+                <figure class="stat_metric">
+                  <figure class="metric_wrapper">
+                    <p class="metric-value" aria-live="polite">
+                      <span class="metric-currency">£</span
+                      ><span
+                        class="metric-number"
+                        data-animate
+                        data-target="1.3"
+                        >0</span
+                      >
+                    </p>
+                    <figcaption class="metric-label">billion</figcaption>
+                  </figure>
+                  <figcaption class="stat-label">Platform Turnover</figcaption>
+                </figure>
+              </li>
+            </ul>
+            <p class="section-subtitle">
+              Our team of professional analysts provides accurate results with
+              the lowest percentage of risk in mind. XX offers all partners a
+              stable and highly profitable way of earning.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-main">
+      <div
+        class="container"
+        style="background-image: url('./assets/img/bg_footer.png')"
+      >
+        <a class="Logo" href="/"
+          ><svg
+            width="40"
+            height="29"
+            viewBox="0 0 40 29"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.7943 10.6048L11.2695 13.1053C10.7876 13.5826 10.7876 14.3564 11.2695 14.8337L14.0506 17.588C14.5686 18.1009 15.8784 17.6152 16.3963 17.1023L18.5436 14.9757C18.7751 14.7465 18.9051 14.4356 18.9051 14.1115L18.9051 12.7748C18.9051 10.7498 20.5627 9.10824 22.6074 9.10824H26.2199C28.2646 9.10824 29.9222 10.7498 29.9222 12.7748L29.9222 16.3525C29.9222 18.3775 28.2646 20.0191 26.2199 20.0191H24.8704C24.5431 20.0191 24.2292 20.1478 23.9977 20.377L21.8503 22.5037C21.3324 23.0166 20.842 24.3138 21.3599 24.8267L24.141 27.581C24.623 28.0583 25.4044 28.0583 25.8863 27.581L28.5698 24.9234C28.888 24.6083 28.9929 24.1477 28.9446 23.7047C28.8142 22.5062 29.2128 21.2619 30.1404 20.3431C31.0681 19.4244 32.3245 19.0297 33.5347 19.1589C33.9821 19.2067 34.4472 19.1028 34.7653 18.7877L38.7578 14.8337C39.2398 14.3564 39.2398 13.5826 38.7578 13.1053L35.2063 9.58805C34.8734 9.2584 34.3816 9.16202 33.9148 9.22236C32.768 9.3706 31.5668 9.00847 30.6858 8.13599C29.8049 7.2635 29.4392 6.07392 29.5889 4.93821C29.6498 4.47593 29.5525 3.98879 29.2196 3.65914L25.8863 0.357973C25.4044 -0.119325 24.623 -0.119324 24.141 0.357973L20.3072 4.15477C19.9629 4.49573 19.8699 5.00334 19.9536 5.47833C20.1791 6.75699 19.7932 8.12069 18.7961 9.10824C17.7989 10.0958 16.4219 10.4779 15.1308 10.2546C14.6512 10.1717 14.1386 10.2639 13.7943 10.6048Z"
+              fill="currentColor"
+            />
+            <path
+              d="M10.7081 3.50661L13.233 1.00614C13.7149 0.528843 14.4963 0.528843 14.9783 1.00614L17.7594 3.76043C18.2773 4.27336 17.7869 5.57053 17.2689 6.08345L15.1216 8.21007C14.8902 8.43928 14.5763 8.56804 14.249 8.56804H12.8993C10.8546 8.56804 9.19699 10.2096 9.19699 12.2346L9.19698 15.8123C9.19698 17.8373 10.8546 19.4789 12.8993 19.4789L16.5118 19.4789C18.5565 19.4789 20.2141 17.8373 20.2141 15.8123V14.4757C20.2141 14.1516 20.3441 13.8407 20.5756 13.6115L22.723 11.4849C23.2409 10.9719 24.5507 10.4862 25.0686 10.9991L27.8498 13.7534C28.3317 14.2307 28.3317 15.0046 27.8498 15.4819L25.1662 18.1395C24.8481 18.4546 24.383 18.5585 23.9356 18.5107C22.7255 18.3815 21.469 18.7762 20.5414 19.695C19.6137 20.6137 19.2151 21.858 19.3456 23.0565C19.3938 23.4995 19.2889 23.9601 18.9707 24.2752L14.9782 28.2292C14.4963 28.7065 13.7149 28.7065 13.233 28.2292L9.68147 24.712C9.3486 24.3823 9.25129 23.8952 9.31222 23.4329C9.4619 22.2972 9.09624 21.1076 8.21526 20.2351C7.33427 19.3626 6.1331 19.0005 4.98632 19.1487C4.51954 19.2091 4.02766 19.1127 3.69479 18.7831L0.361461 15.4819C-0.120487 15.0046 -0.120487 14.2307 0.361461 13.7534L4.19526 9.95664C4.53953 9.61568 5.05209 9.52352 5.53171 9.60647C6.82282 9.82975 8.19981 9.44762 9.19698 8.46007C10.1942 7.47252 10.58 6.10882 10.3546 4.83016C10.2708 4.35517 10.3639 3.84756 10.7081 3.50661Z"
+              fill="currentColor"
+            />
+          </svg>
+
+          <p class="logo-brand">GREEN CHART</p></a
+        >
+        <button
+          data-modal="form"
+          aria-haspopup="dialog"
+          aria-expanded="false"
+          aria-controls="modal-form"
+          title="Open modal form to register"
+          type="button"
+          class="btn-primary"
+        >
+          Register Now
+        </button>
+        <nav>
+          <ul class="nav_links footer_links">
+            <li class="link">
+              <a title="Scroll to leaders section" href="#leaders">Leaders</a>
+            </li>
+            <li class="link">
+              <a title="Scroll to trades section" href="#trades">Trades</a>
+            </li>
+            <li class="link">
+              <a title="Scroll to advantages section" href="#advantages"
+                >Advantages</a
+              >
+            </li>
+            <li class="link">
+              <a title="Scroll to stats section" href="#stats">Stats</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="docs_wrapper">
+          <div class="docs">
+            <a href="" target="_blank" rel="noopener noreferrer"
+              >Privacy policy</a
+            ><a href="" target="_blank" rel="noopener noreferrer">Terms</a>
+          </div>
+          <p class="copyright">
+            <span>GreenChart, All Rights Reserved.</span> <span>2025</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <div id="timer">
+      <div class="timer_title">
+        <span class="flag"
+          ><img src="./assets/img/flag_1.png" alt="Great Britain flag"
+        /></span>
+        <p class="timer-title">
+          Earn from <span class="highligthed">£780</span> to
+          <span class="highligthed">£1,800</span> per day by using an investment
+          platform
+        </p>
+      </div>
+      <div class="timer_time">
+        <p class="timer-time">
+          <span data-time="minute" class="minute">10</span>&nbsp;:&nbsp;<span
+            data-time="seconds"
+            class="seconds"
+            >00</span
+          >
+        </p>
+        <button
+          type="button"
+          class="btn-primary"
+          data-modal="form"
+          aria-haspopup="dialog"
+          aria-expanded="false"
+          aria-controls="modal-form"
+          title="Open modal form to register"
+        >
+          Register Now
+        </button>
+      </div>
+    </div>
+    <dialog id="modal-form" data-modal="modalForm">
+      <div class="modal_content">
+        <header class="header-modal">
+          <h2 class="section-title modal-title">
+            Earn from <span class="highligthed">£780</span> to
+            <span class="highligthed">£1,800</span> per day by using an
+            investment platform
+          </h2>
+          <button
+            autofocus
+            type="button"
+            class="modal-close"
+            title="Close modal"
+            data-modal="closeModal"
+          >
+            <svg
+              class="icon-close"
+              width="13"
+              height="13"
+              viewBox="0 0 13 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.3137 -0.000964165L12.7279 1.41325L7.77823 6.36294L12.728 11.3127L11.3138 12.7269L6.36401 7.77716L1.41421 12.727L0 11.3127L4.9498 6.36294L9.31025e-05 1.41324L1.41431 -0.000976562L6.36401 4.94873L11.3137 -0.000964165Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </header>
+        <div class="form_wrapper">
+          <form action="#" class="form">
+            <div class="form_fields">
+              <div class="form-field">
+                <label for="_first-name" class="field-label">First name</label>
+                <div class="form-input_wrapper">
+                  <input
+                    type="text"
+                    id="_first-name"
+                    class="form-input"
+                    name="name"
+                    placeholder="Enter first name"
+                  />
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="_last-name" class="field-label">Last name</label>
+                <div class="form-input_wrapper">
+                  <input
+                    type="text"
+                    id="_last-name"
+                    name="lastname"
+                    class="form-input"
+                    placeholder="Enter last name"
+                  />
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="_email" class="field-label">Email</label>
+                <div class="form-input_wrapper">
+                  <input
+                    type="email"
+                    id="_email"
+                    name="email"
+                    class="form-input"
+                    placeholder="Enter email"
+                  />
+                </div>
+              </div>
+              <div class="form-field phone-field">
+                <label for="phone" class="field-label">Phone</label>
+                <div>
+                  <div class="form-input_wrapper">
+                    <button type="button" class="current-flag">🇬🇧</button>
+                    <input
+                      type="text"
+                      id="phone"
+                      name="phone"
+                      class="form-input"
+                      placeholder="+44"
+                    />
+                  </div>
+                  <div class="countries_wrapper">
+                    <ul class="countries">
+                      <li>
+                        <button type="button" class="country">
+                          <span class="country-flag">🇬🇧</span>
+                          <p class="country-name">Great Britain</p>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary">Register Now</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <!-- scripts -->
+    <script src="https://unpkg.com/imask"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+    <script src="./assets/js/swiper.js"></script>
+    <script src="./assets/js/animation.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
+    <!-- scripts -->
+  </body>
+</html>
