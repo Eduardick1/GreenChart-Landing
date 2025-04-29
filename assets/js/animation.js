@@ -1,37 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
   function animateCoin(coin, index) {
-    gsap.set(coin, {
-      duration: 0.5,
-      opacity: 0,
-      scale: 0.5,
-      rotation: -180,
-    });
-
-    const tl = gsap.timeline({ delay: index });
-
-    tl.to(coin, {
-      duration: 1,
-      scale: 1,
-      rotation: 0,
-      opacity: 1,
-      ease: "power4.inOut",
-      scrollTrigger: {
-        trigger: coin,
-        start: "top 80%",
-      },
-      onComplete: () =>
-        gsap.to(coin, {
-          y: "-=10",
-          duration: 2,
-          scale: 1,
-          rotation: 0,
-          opacity: 1,
-          ease: "sine.inOut",
-          repeat: -1,
-          yoyo: true,
-          rotation: "+=5",
-        }),
+    gsap.to(coin, {
+      delay: index,
+      y: "-=10",
+      duration: 3,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true,
+      rotation: "+=10",
     });
   }
   function animateCounter(counterElement) {
@@ -63,20 +40,19 @@ document.addEventListener("DOMContentLoaded", () => {
       id: "stats",
       animate: animateCounter,
     },
-    // {
-    //   id: "trades",
-    //   animate: animateCoin,
-    // },
-    // {
-    //   id: "leaders",
-    //   animate: animateCoin,
-    // },
+    {
+      id: "trades",
+      animate: animateCoin,
+    },
+    {
+      id: "leaders",
+      animate: animateCoin,
+    },
   ];
 
   Sections.forEach((s) => {
     const selector = `[data-section=${s.id}]`;
     ScrollTrigger.create({
-      once: true,
       trigger: document.querySelector(selector),
       onEnter: () => {
         const elemsToAnimate = document.querySelectorAll(
